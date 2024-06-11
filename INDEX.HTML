@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>CSS website layout</title>
+<style>
+	body {
+		font-family: Arial;
+		padding: 10px;
+		background: #f1f1f1;
+	}
+	/*style the header */
+	.header {
+		padding:169px;
+		text-align: center;
+		background: white;
+		background-image: url("bckk.webp");
+		background-repeat: no-reapet;
+
+	}
+
+	* {
+		box sizing: border-box;
+	}
+	/*style the top navigation bar*/
+	.topnav{
+		overflow: hidden;
+		background-color: #333;
+	}
+
+/* style the topnav links */
+.topnav a {
+	float: left;
+	display:  block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+	/* change color on hover */
+	.topnav a:hover {
+		backgroud-color: #ddd;
+		color: black;
+	}
+
+	/*create two unequal coloums that floats next to each other*/
+	.leftcolumn{
+		float: left;
+		width: 75%;
+
+	}
+	/*right column*/
+.rightcolumn{
+	float: left;
+	width: 25%;
+	background-color: #f1f1f1;
+	padding left: 20px; 
+}
+ /* fake image*/
+ .fakeimg{
+ 	background-color: #aaa;
+ 	width: 100%;
+ 	padding: 20Px;
+ }
+  /*add acard effect for articles*/
+  .card {
+  	background-color: white;
+  	padding: 20px;
+  	margin-top: 20px;
+  }
+  /*clear floats after the columns*/
+  .row:: after {
+  	content: "";
+  	display: table;
+  	clear: both;
+  }
+
+  /*footer*/
+  .footer{
+  	padding: 20px;
+  	text-align: center;
+  	background: #ddd;
+  	margin-top: 20px;
+  }
+  /* responsive layout - when the screen is less than 800px wide, make the two columnstack on top each other instead of next to each other*/
+  @media screen and (max-width: 800px){
+  	.leftcolumn, .rightcolumn{
+  		width: 100%;
+  		padding: 0;
+  	}
+  	}
+  	/* responsive layout - when the screen is less than 400px wide, make the navigation stack on top off each other instead of next to each other*/
+  	@media screen and (max-width: 400px) {
+  		.topnav a {
+  			float: none;
+  			width: 100%;
+  		}
+  	}
+
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1></h1>
+		<p></p>
+	</div>
+
+	<div class="topnav">
+     <a href ="#">Parfum wanita</a>
+	 <a href ="#">Parfum Laki-Laki</a>
+	 <a href ="#">link3</a>
+</div>
+
+ <div class="row">
+ 	<div class="leftcolumn">
+ 		<div class="card">
+ 			<h2>TITLE HEADING</h2>
+            <h5>Tilte description, dec 7, 2017</h5>
+
+            <img src="iklan3.jpg"height="400px"width="100%">
+            <p>Some text..</p>
+            <p> sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+        <div class="card">
+        	<h2>TITLE HEADING</h2>
+        	<h5> title description, sep 2, 2017</h5>
+        	<img src="iklan4.webp"height="600px"width="100%">   
+        	<p>Some text..</p>
+            <p> sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+       </div>
+       <div class="rightcolumn">
+       	<div class="card">
+       		<h2>About me</h2>
+       		<img src="logo.png"height="100px"width="100%">
+       		<p>some text about me in culpa qui officia deserunt mollit anim..</p>
+       	</div>
+       	<div classs="card">
+       		<h3>popular post</h3>
+       		<img src="parfum1.jpg"eight="150px"width="100%">
+       		<img src="parfum2.jpg"height="250px"width="100%">
+       		<img src="parfum5.webp"height="300px"width="100%">
+       		<img src="parfum4.jpg"height="300px"width="100%">
+       	</div>
+       	<div class="card">
+       		<h3>Follow Me</h3>
+       		<p>Some text..</p>
+       	</div>
+       </div>
+   </div>
+
+   <div class="footer">
+   	<h2>Footer</h2>
+   </div>
+   
+</body>
+</html>
